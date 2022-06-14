@@ -17,7 +17,7 @@ function SectionFour() {
 								<p>
 									Bandung, Jakarta, Surabaya, Padang, Bukittinggi, Medan,
 									Makasar, Kalimantan, Tasikmalaya, Jambi,{' '}
-									<a className="color">
+									<a href="##" target="_blank" className="color">
 										<strong>dan segera di kota lainnya!</strong>{' '}
 									</a>
 								</p>

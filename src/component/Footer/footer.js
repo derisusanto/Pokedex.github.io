@@ -28,12 +28,14 @@ function Footer() {
 							<ul>
 								<li className="span">Tentang</li>
 								<li>
-									<a href="" href="">
+									<a href="##" target="_blank">
 										Layanan Kami
 									</a>
 								</li>
 								<li>
-									<a href="">FAQ</a>
+									<a href="##" target="_blank">
+										FAQ
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -41,7 +43,9 @@ function Footer() {
 							<ul>
 								<li className="span">Kemitraan</li>
 								<li>
-									<a href="">Mitra Logistk</a>
+									<a href="##" target="_blank">
+										Mitra Logistk
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -49,13 +53,19 @@ function Footer() {
 							<ul>
 								<li className="span"> Tautan Cepat</li>
 								<li>
-									<a href="">Cek Ongkir</a>
+									<a href="##" target="_blank">
+										Cek Ongkir
+									</a>
 								</li>
 								<li>
-									<a href="">Cek Resi</a>
+									<a href="##" target="_blank">
+										Cek Resi
+									</a>
 								</li>
 								<li>
-									<a href="">Cek Mulai Kirim</a>
+									<a href="##" target="_blank">
+										Cek Mulai Kirim
+									</a>
 								</li>
 							</ul>
 						</div>

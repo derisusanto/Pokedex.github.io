@@ -7,7 +7,7 @@ function CaseOne(params) {
 	const CekNameFruits = props => {
 		const lowercased = props.data.map(i => i.fruitName.toLowerCase());
 		const removeDuplicate = lowercased.filter(
-			(item, index) => lowercased.indexOf(item) == index
+			(item, index) => lowercased.indexOf(item) === index
 		);
 		var data = removeDuplicate.map((buah, index) => {
 			return (
