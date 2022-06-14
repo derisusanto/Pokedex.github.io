@@ -11,11 +11,18 @@ function CaseTwo() {
 				</>
 			);
 		});
-		return data;
+		const length = data.length;
+		return (
+			<div>
+				<p>Jumlah :{length}</p>
+				{data}
+			</div>
+		);
 	};
 	return (
-		<div className="">
+		<div className="m-5">
 			<FindComments data={Comments} />
+			<b>Bingung Udah Malem</b>
 		</div>
 	);
 }

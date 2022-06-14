@@ -98,8 +98,12 @@ function CaseOne(params) {
 					<FilterFruit data={Fruits} />
 				</div>
 				<div className="point">
-					<label className="mb-2">Stock Buah di Wadah</label>
+					<label className="mb-2">Soal No 3 : Stock Buah di Wadah</label>
 					<CaseThree data={Fruits} />
+				</div>
+				<div className="point">
+					<label className="mb-2">Soal No 4 : Pertanyaan</label>
+					Lumayan Pusing
 				</div>
 			</div>
 		</div>
