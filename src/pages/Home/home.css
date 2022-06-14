@@ -1,0 +1,27 @@
+.home {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.home .btn-case {
+	width: 100px;
+	background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 14px;
+	color: white;
+	letter-spacing: 0.15em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn-case:hover {
+	background-color: aqua;
+}
