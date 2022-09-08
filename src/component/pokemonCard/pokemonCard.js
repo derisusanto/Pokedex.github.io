@@ -32,6 +32,7 @@ export const PokemonCard = ({ name, image, type, onEventModal }) => {
 						) : null
 					}
 				/>
+
 				<CardMedia
 					onClick={onEventModal}
 					component="img"

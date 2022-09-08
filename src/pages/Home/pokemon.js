@@ -46,7 +46,7 @@ function Pokemon({ value }) {
 
 	const getListPokemon = () => {
 		axios
-			.get(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=0`)
+			.get(`https://pokeapi.co/api/v2/pokemon?limit=70&offset=0`)
 			.then(response => {
 				createPokemonObject(response.data.results);
 			});
