@@ -1,21 +1,19 @@
+import React, { useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './pages/Home/home';
-import CaseOne from './pages/Case/Case_One/case_one';
-import CaseTwo from './pages/Case/Case_Two/case_two';
-import CaseThree from './pages/Case/Case_Three/case_three';
+import Headers from './component/header/header';
+import Home from './pages/Home/pokemon';
 import './App.css';
 
 function App() {
+	const [state, setState] = useState('');
 	return (
 		<div className="App">
+			<Headers searchValue={e => setState(e)} />
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Home value={state} />} />
 					<Route path="/home" element={<Home />} />
-					<Route path="/case_one" element={<CaseOne />} />
-					<Route path="/case_two" element={<CaseTwo />} />
-					<Route path="/case_three" element={<CaseThree />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

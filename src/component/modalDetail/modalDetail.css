@@ -1,0 +1,17 @@
+.card-modal-detail {
+	width: 70%;
+	height: auto;
+	background-color: whitesmoke;
+	border-radius: 10px;
+}
+
+.card-modal-detail .stat {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	margin-bottom: 10px;
+}
+
+.stat p {
+	margin-bottom: 0;
+}
