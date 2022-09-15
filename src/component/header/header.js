@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -53,7 +54,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar(props) {
 	const [value, setValue] = useState('');
-	props.searchValue(value);
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (value !== '') {
+			navigate(`/home/${value}`);
+		}
+	}, [value]);
 
 	return (
 		<Box sx={{ flexGrow: 1, marginBottom: 10 }}>

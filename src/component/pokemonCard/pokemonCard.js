@@ -1,58 +1,51 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import './pokemonCard.css';
 
-export const PokemonCard = ({ name, image, type, onEventModal }) => {
-	const [isCompare, setIsCompare] = useState(false);
-	return (
-		<>
-			<Card sx={{ maxWidth: 250, cursor: 'pointer' }}>
-				<CardHeader
-					avatar={
-						<Avatar sx={{ border: '1px solid black' }} aria-label="recipe">
-							<img
-								height="50"
-								src="https://w7.pngwing.com/pngs/620/521/png-transparent-poke-ball-pokemon-pokemon-rim-mobile-phones-pokemon.png"
-								alt="img-ball"
-							/>
-						</Avatar>
-					}
-					title={<b onClick={onEventModal}>{name}</b>}
-					action={
-						isCompare ? (
-							<IconButton aria-label="settings">
-								<input type="checkbox" />
-							</IconButton>
-						) : null
-					}
-				/>
+import ImageNotFound from '../../assest/icons/default.jpg';
+import IconPokemon from '../../assest/icons/logo.png';
 
-				<CardMedia
-					onClick={onEventModal}
-					component="img"
-					height="auto"
-					image={image}
-					alt={`img-${name}`}
-					style={{
-						backgroundImage: `linear-gradient(to right, #8360c3, #2ebf91)`
-					}}
-				/>
-				<CardContent>
-					<Typography variant="body2" color="text.secondary" className="d-flex">
-						{type.map((i, idx) => (
-							<div key={idx} className="list-type">
-								{i.type.name}
-							</div>
-						))}
-					</Typography>
-				</CardContent>
-			</Card>
-		</>
+export const PokemonCard = ({ name, url }) => {
+	const navigate = useNavigate();
+	const [pokemon, setPokemon] = useState({
+		pokemonIndex: '',
+		imgUrl: ''
+	});
+	// const [error, setError] = useState(false);
+	const [isCompare, setIsCompare] = useState(true);
+
+	useEffect(() => {
+		const pokemonIndex = url.split('/')[url.split('/').length - 2];
+		const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIndex}.png`;
+
+		setPokemon({
+			imgUrl,
+			pokemonIndex
+		});
+	}, []);
+	return (
+		<React.Fragment>
+			<div className="card" onClick={() => navigate(`/detail/${name}`)}>
+				<div className="card-header">
+					<img src={IconPokemon} width="40px" />
+					<span>{name}</span>
+				</div>
+				<div className="card-content">
+					<img
+						src={isCompare ? ImageNotFound : pokemon.imgUrl}
+						width="150px"
+						height="150px"
+						onLoad={() => setIsCompare(false)}
+					/>
+				</div>
+			</div>
+		</React.Fragment>
 	);
 };

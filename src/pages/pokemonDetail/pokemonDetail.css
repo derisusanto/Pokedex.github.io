@@ -1,0 +1,24 @@
+.card-modal-detail {
+	width: 80%;
+	height: auto;
+	background-color: whitesmoke;
+	border-radius: 10px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.card-modal-detail .type {
+	background-color: transparent;
+	border: 1px solid #00cdac;
+	border-radius: 5px;
+}
+
+.card-modal-detail .stat {
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	margin-bottom: 10px;
+}
+
+.stat p {
+	margin-bottom: 0;
+}
